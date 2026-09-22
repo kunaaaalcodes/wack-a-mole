@@ -21,24 +21,25 @@ body {
   font-family: "Nunito", sans-serif;
   background: #fff9e2;
   text-align: center;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 8vw, 4.5rem);
   line-height: 1;
   margin: 2rem 0 0 0;
   color: #ff7660;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3rem);
   color: #3b1010;
   margin: 2rem;
 }
 
 .score {
   background: #ffe5cf;
-  padding: 0 3rem;
+  padding: 0 clamp(1rem, 4vw, 3rem);
   line-height: 1;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -47,8 +48,9 @@ h2 {
 }
 
 .game {
-  width: 600px;
-  height: 400px;
+  width: min(600px, 92vw);
+  height: auto;
+  aspect-ratio: 3 / 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -69,10 +71,10 @@ h2 {
   background-size: contain;
   content: "";
   width: 100%;
-  height: 70px;
+  height: clamp(36px, 9vw, 70px);
   position: absolute;
   z-index: 2;
-  bottom: -30px;
+  bottom: clamp(-30px, -4vw, -6px);
 }
 
 .mole {
@@ -97,8 +99,8 @@ h2 {
   border: 0;
   background: #3b1010;
   color: #fff;
-  font-size: 2rem;
-  padding: 1rem 2rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.6rem, 4vw, 2rem);
   cursor: pointer;
   margin: 1rem;
 }
